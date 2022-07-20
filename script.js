@@ -1,14 +1,26 @@
 let pergunta = {
-    titulo: 'Cantor',
-    alternativas: ['Belchior', 'Caetano Veloso', 'Gilberto Gil','Chico Buarque'],
+    titulo: 'Cantor', 
+    alternativas: ['Belchior','Caetano Veloso','Gilberto Gil','Chico Buarque'],
     correto: 0
 }
-function exibePergunta(q) {
+function inicia(){
+    let alternat = document.querySelectorAll('.alternativa');
+    alternat.forEach(function(element,index){
+        element.addEventListener('click', function() {
+            console.log('Checa');
+        })
+    })    
+    mostraQuestao(pergunta);
+}
+
+function mostraQuestao(q) {
     let titleDiv = document.getElementById('titulo');
     titleDiv.textContent = q.titulo;
 
-    let alternativas = document.querySelectorAll('alternativas');
-    
+    let alternat = document.querySelectorAll('.alternativa');
+    alternat.forEach(function(element,index){
+        element.textContent = q.alternativas[index];
+    })
+ 
 }
-
-exibeQuestao(pergunta);
+inicia();
