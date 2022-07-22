@@ -3,7 +3,8 @@ let pergunta = {
     alternativas: ['Belchior','Caetano Veloso','Gilberto Gil','Chico Buarque'],
     correto: 0
 }
-function inicia(){
+let app = {
+inicia: function(){
     let alternat = document.querySelectorAll('.alternativa');
     alternat.forEach(function(element,index){
         element.addEventListener('click', function() {
@@ -13,7 +14,7 @@ function inicia(){
     mostraQuestao(pergunta);
 }
 
-function mostraQuestao(q) {
+mostraQuestao: function(q) {
     let titleDiv = document.getElementById('titulo');
     titleDiv.textContent = q.titulo;
 
@@ -22,5 +23,6 @@ function mostraQuestao(q) {
         element.textContent = q.alternativas[index];
     })
  
+}
 }
 inicia();
