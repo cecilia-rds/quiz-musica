@@ -1,0 +1,28 @@
+#titulo {
+    margin-top: 5%;
+}
+.quiz {
+    font-size: 2em;
+    position: absolute;
+    top: 10%;
+    margin-left: 52%;
+    color: rgb(128, 74, 32);
+
+}
+.background-img {
+    max-width:50%;
+    max-height:50%;
+    width: auto;
+    height: auto;
+}
+.titulo-principal {
+    margin-left: 30%;
+
+} 
+.alternativas {
+
+}
+
+#pontos {
+    margin-left: 30%;
+}
