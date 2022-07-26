@@ -1,18 +1,18 @@
 let pergunta = [
 {
-    titulo: '"Amar e mudar as coisas me interess mais..."', 
+    titulo: '"Mais avançado que a mais avançada das mais avançadas das tecnologias...?"', 
     alternativas: ['Belchior','Caetano Veloso','Gilberto Gil','Chico Buarque'],
-    correta: 0
-},
-{
-    titulo: '"E me remete ao froio, que vem lá do sul."', 
-    alternativas: ['Djavan','Caetano Veloso','Gilberto Gil','Chico Buarque'],
-    correta: 0
-},
-{
-    titulo: '"Rapite-me cameloaé preto."', 
-    alternativas: ['Djavan','Caetano Veloso','Gilberto Gil','Chico Buarque'],
     correta: 1
+},
+{
+    titulo: '"E me remete ao frio que vem lá do sul...?"', 
+    alternativas: ['Djavan','Chico Cesar','Cazuza','João Gilberto'],
+    correta: 0
+},
+{
+    titulo: '"Seus ouvidos se fecharam a qualquer música...?"', 
+    alternativas: ['Lenine','Gal Costa','Maria Bethânia','Chico Buarque'],
+    correta: 2
 }
 ]
 
@@ -47,7 +47,7 @@ mostraQuestao: function(q) {
 proximaQuestao: function(){
     this.atualPosicao++;
     if(this.atualPosicao == pergunta.length){
-        this.atualPosicao = 0; //volta pra questão inicial//
+        alert('FIM!');
     }
 },
 checaResposta: function(user){
@@ -56,7 +56,7 @@ checaResposta: function(user){
         this.totalPontos++;
     }
     else {
-        console.log('Errado')
+        alert('Errado')
     }
     this.atualizaPontos();
     this.proximaQuestao();
@@ -64,7 +64,7 @@ checaResposta: function(user){
 },
 atualizaPontos: function(){
     let scoreDiv = document.getElementById('pontos');
-    scoreDiv.textContent = `A pontução é: ${this.totalPontos}`;
+    scoreDiv.textContent = `Você fez: ${this.totalPontos} pontos`;
 }
 
 }
